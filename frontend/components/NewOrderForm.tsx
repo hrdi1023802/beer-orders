@@ -5,7 +5,7 @@ export default function NewOrderForm() {
     const router = useRouter();
 
     const handleCreate = async () => {
-        const res = await fetch('/api/orders', { method: 'POST' });
+        const res = await fetch('http://localhost:8000/orders', { method: 'POST' });
         const newOrder = await res.json();
         router.push(`/order/${newOrder.id}`);
     };

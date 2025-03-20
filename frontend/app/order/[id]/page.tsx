@@ -11,7 +11,7 @@ export default function OrderDetail({ params }: { params: { id: string } }) {
         fetcher,
         {
             revalidateOnMount: true,
-            refreshInterval: false,
+            refreshInterval: 0,
         }
     );
 
