@@ -48,4 +48,4 @@ def pay_order(order_id: int):
         raise HTTPException(status_code=404, detail="Order not found")
     if "error" in result:
         raise HTTPException(status_code=400, detail=result["error"])
-    return order_service.get_order(order_id)
+    return {"message": "marked as paid", "order": order_service.get_order(order_id)}
